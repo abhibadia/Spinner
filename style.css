@@ -68,6 +68,11 @@ body {
   color: #FF9A62;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 /* Phone layout */
 @media (max-width: 600px) {
   .navbar {
@@ -85,5 +90,10 @@ body {
 
   .nav-links a {
     font-size: 11px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }
