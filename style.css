@@ -208,6 +208,51 @@ img {
   transform: translateY(-2px);
 }
 
+.hero-image-card {
+  position: relative;
+}
+
+.hero-typing-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #F7EEDC;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 156px;
+  letter-spacing: 1px;
+
+  background: none;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+
+  text-align: center;
+  white-space: nowrap;
+
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75);
+}
+
+#typing-word {
+  color: #F7C96B;
+}
+
+.typing-cursor {
+  color: #FF735C;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
 /* Phone layout */
 @media (max-width: 600px) {
   .navbar {
@@ -279,5 +324,9 @@ img {
 
   .social-links a {
     font-size: 24px;
+  }
+
+  .hero-typing-text {
+    font-size: 64px;
   }
 }
