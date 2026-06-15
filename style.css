@@ -73,6 +73,100 @@ img {
   height: auto;
 }
 
+.split-showcase {
+  width: 100%;
+  min-height: calc(100vh - 75px);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+
+  padding: 72px 8%;
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(65, 50, 79, 0.45) 0%, transparent 32%),
+    linear-gradient(135deg, #21162B 0%, #15101C 70%);
+}
+
+.image-card {
+  width: 100%;
+  min-height: 440px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #241B2E;
+  border: 1px solid #41324F;
+  border-radius: 28px;
+
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-box {
+  background: rgba(36, 27, 46, 0.84);
+  border: 1px solid #41324F;
+  border-radius: 28px;
+
+  padding: 48px;
+
+  color: #F7EEDC;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.text-box .eyebrow {
+  color: #F7C96B;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.text-box h1 {
+  color: #F7EEDC;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 64px;
+  line-height: 0.95;
+  margin-bottom: 24px;
+}
+
+.text-box p {
+  color: #B9AFC6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.showcase-button {
+  display: inline-block;
+
+  background: #FF735C;
+  color: #15101C;
+
+  padding: 14px 24px;
+  border-radius: 999px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.showcase-button:hover {
+  background: #FF9A62;
+  transform: translateY(-2px);
+}
+
 /* Phone layout */
 @media (max-width: 600px) {
   .navbar {
@@ -95,5 +189,35 @@ img {
   img {
     width: 100%;
     height: auto;
+  }
+
+  .split-showcase {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    padding: 36px 18px;
+  }
+
+  .image-card {
+    min-height: 280px;
+    border-radius: 22px;
+  }
+
+  .text-box {
+    padding: 28px;
+    border-radius: 22px;
+  }
+
+  .text-box .eyebrow {
+    font-size: 24px;
+  }
+
+  .text-box h1 {
+    font-size: 42px;
+  }
+
+  .text-box p {
+    font-size: 15px;
   }
 }
