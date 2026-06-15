@@ -167,6 +167,47 @@ img {
   transform: translateY(-2px);
 }
 
+.social-footer {
+  width: 100%;
+  padding: 48px 8%;
+
+  background: #0B0710;
+  border-top: 1px solid #41324F;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.social-footer h2 {
+  color: #F7EEDC;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.social-links a {
+  color: #B9AFC6;
+  text-decoration: none;
+
+  font-family: "Jolly Lodger", cursive;
+  font-size: 30px;
+
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #5BE3C6;
+  transform: translateY(-2px);
+}
+
 /* Phone layout */
 @media (max-width: 600px) {
   .navbar {
@@ -219,5 +260,24 @@ img {
 
   .text-box p {
     font-size: 15px;
+  }
+
+  .social-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 18px;
+  }
+
+  .social-footer h2 {
+    font-size: 34px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .social-links a {
+    font-size: 24px;
   }
 }
