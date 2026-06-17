@@ -11,7 +11,7 @@ body {
   width: 100%;
   min-height: 100%;
   background-color: #15101C;
-  padding-top: 37px;
+  padding-top: 25px;
 }
 
 
@@ -30,7 +30,7 @@ body {
 
   padding: 0 32px 0 24px;
 
-  background-color: rgba(21, 16, 28, 0.82);
+  background-color: rgba(21, 16, 28, 1);
   border-bottom: 1px solid #41324F;
 
   font-family: "Jolly Lodger", cursive;
