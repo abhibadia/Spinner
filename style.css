@@ -260,6 +260,568 @@ img {
   }
 }
 
+.pick-six-section {
+  width: 100%;
+  padding: 88px 8%;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(91, 227, 198, 0.12) 0%, transparent 28%),
+    linear-gradient(135deg, #15101C 0%, #21162B 100%);
+  border-top: 1px solid #41324F;
+}
+
+.pick-six-header {
+  max-width: 760px;
+  margin-bottom: 46px;
+}
+
+.section-eyebrow {
+  color: #F7C96B;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.pick-six-header h2 {
+  color: #F7EEDC;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 68px;
+  font-weight: 400;
+  line-height: 0.95;
+  margin-bottom: 18px;
+}
+
+.pick-six-header p {
+  color: #B9AFC6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.artist-card {
+  background: #241B2E;
+  border: 1px solid #41324F;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-8px);
+  border-color: #5BE3C6;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+}
+
+.artist-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.artist-info {
+  padding: 22px;
+}
+
+.artist-rank {
+  display: inline-block;
+  color: #15101C;
+  background: #F7C96B;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.artist-info h3 {
+  color: #F7EEDC;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.albums-title {
+  color: #5BE3C6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.artist-info ul {
+  list-style: none;
+}
+
+.artist-info li {
+  color: #B9AFC6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(65, 50, 79, 0.7);
+  padding: 6px 0;
+}
+
+.artist-info li:last-child {
+  border-bottom: none;
+}
+
+.top-albums-section {
+  width: 100%;
+  padding: 88px 8%;
+
+  background:
+    radial-gradient(circle at 20% 15%, rgba(247, 201, 107, 0.12) 0%, transparent 26%),
+    linear-gradient(135deg, #21162B 0%, #15101C 80%);
+
+  border-top: 1px solid #41324F;
+}
+
+.top-albums-header {
+  max-width: 760px;
+  margin-bottom: 46px;
+}
+
+.top-albums-header h2 {
+  color: #F7EEDC;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 68px;
+  font-weight: 400;
+  line-height: 0.95;
+  margin-bottom: 18px;
+}
+
+.top-albums-header p {
+  color: #B9AFC6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.album-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.album-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.album-row {
+  min-height: 86px;
+
+  display: grid;
+  grid-template-columns: 58px 64px 1fr;
+  align-items: center;
+  gap: 18px;
+
+  padding: 12px 18px;
+
+  background: #241B2E;
+  border: 1px solid #41324F;
+  border-radius: 18px;
+
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-row:hover {
+  transform: translateX(6px);
+  border-color: #5BE3C6;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28);
+}
+
+.album-rank {
+  color: #F7EEDC;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 32px;
+  text-align: center;
+}
+
+.album-row img {
+  width: 64px;
+  height: 64px;
+
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(247, 238, 220, 0.18);
+}
+
+.album-row h3 {
+  color: #F7EEDC;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Top 3 highlight boxes */
+.rank-gold {
+  background:
+    linear-gradient(135deg, rgba(247, 201, 107, 0.36), rgba(36, 27, 46, 0.95));
+  border-color: #F7C96B;
+}
+
+.rank-silver {
+  background:
+    linear-gradient(135deg, rgba(201, 204, 211, 0.32), rgba(36, 27, 46, 0.95));
+  border-color: #C9CCD3;
+}
+
+.rank-bronze {
+  background:
+    linear-gradient(135deg, rgba(184, 115, 51, 0.34), rgba(36, 27, 46, 0.95));
+  border-color: #B87333;
+}
+
+.rank-gold .album-rank {
+  color: #F7C96B;
+}
+
+.rank-silver .album-rank {
+  color: #C9CCD3;
+}
+
+.rank-bronze .album-rank {
+  color: #B87333;
+}
+
+.bracket-section {
+  width: 100%;
+  padding: 88px 8%;
+
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255, 115, 92, 0.12) 0%, transparent 30%),
+    linear-gradient(135deg, #15101C 0%, #21162B 100%);
+
+  border-top: 1px solid #41324F;
+}
+
+.bracket-header {
+  max-width: 780px;
+  margin-bottom: 50px;
+}
+
+.bracket-header h2 {
+  color: #F7EEDC;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 68px;
+  font-weight: 400;
+  line-height: 0.95;
+  margin-bottom: 18px;
+}
+
+.bracket-header p {
+  color: #B9AFC6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.traditional-bracket {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.bracket-path-card,
+.grand-final-card {
+  background: rgba(36, 27, 46, 0.78);
+  border: 1px solid #41324F;
+  border-radius: 28px;
+  padding: 32px;
+  overflow-x: auto;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.bracket-path-card h3,
+.grand-final-card h3 {
+  color: #F7C96B;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 46px;
+  font-weight: 400;
+  margin-bottom: 34px;
+}
+
+/* The actual bracket layout */
+.bracket-tree {
+  min-width: 850px;
+
+  display: grid;
+  grid-template-columns: 240px 240px 240px;
+  column-gap: 72px;
+  align-items: center;
+}
+
+.bracket-round {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+  position: relative;
+}
+
+.lower-bracket-tree .round-one {
+  gap: 34px;
+}
+
+.lower-bracket-tree .round-two {
+  gap: 96px;
+}
+
+.match {
+  position: relative;
+  background: #241B2E;
+  border: 1px solid #41324F;
+  border-radius: 16px;
+  overflow: visible;
+  min-height: 108px;
+}
+
+.team {
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 16px;
+
+  color: #F7EEDC;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+
+  background: #241B2E;
+}
+
+.team:first-child {
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid rgba(65, 50, 79, 0.9);
+}
+
+.team:last-child {
+  border-radius: 0 0 16px 16px;
+}
+
+.winner-slot {
+  color: #B9AFC6;
+  font-style: italic;
+}
+
+.top-seed {
+  color: #15101C;
+  background: linear-gradient(135deg, #F7C96B, #FF9A62);
+}
+
+.final-path-match {
+  border-color: #5BE3C6;
+}
+
+.grand-final-card {
+  max-width: 620px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: visible;
+}
+
+.grand-final-match {
+  border-color: #FF735C;
+  box-shadow: 0 0 34px rgba(255, 115, 92, 0.22);
+}
+
+.finalist {
+  color: #F7EEDC;
+  font-size: 18px;
+}
+
+.grand-final-match .team:first-child {
+  background: rgba(255, 115, 92, 0.14);
+}
+
+.grand-final-match .team:last-child {
+  background: rgba(91, 227, 198, 0.12);
+}
+
+/* Horizontal lines from Round 1 to Round 2 */
+.round-one .match::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -72px;
+  width: 72px;
+  height: 2px;
+  background: #41324F;
+  transform: translateY(-50%);
+}
+
+/* Horizontal lines from Round 2 toward connector */
+.round-two .match::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -36px;
+  width: 36px;
+  height: 2px;
+  background: #41324F;
+  transform: translateY(-50%);
+}
+
+/* Vertical connector between Round 2 matches */
+.round-two::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -36px;
+  width: 2px;
+  height: 172px;
+  background: #41324F;
+  transform: translateY(-50%);
+}
+
+/* Horizontal line from connector into Round 3 */
+.round-three .match::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -36px;
+  width: 36px;
+  height: 2px;
+  background: #41324F;
+  transform: translateY(-50%);
+}
+
+/* Small glow on important path matches */
+.final-path-match::after,
+.grand-final-match::after {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .artist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .top-albums-section {
+    padding: 52px 18px;
+  }
+
+  .top-albums-header h2 {
+    font-size: 48px;
+  }
+
+  .top-albums-header p {
+    font-size: 15px;
+  }
+
+  .album-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .album-row {
+    grid-template-columns: 46px 56px 1fr;
+    gap: 14px;
+    padding: 10px 14px;
+  }
+
+  .album-row img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .album-rank {
+    font-size: 26px;
+  }
+
+  .album-row h3 {
+    font-size: 26px;
+  }
+
+  .bracket-section {
+    padding: 52px 18px;
+  }
+
+  .bracket-header h2 {
+    font-size: 48px;
+  }
+
+  .bracket-header p {
+    font-size: 15px;
+  }
+
+  .bracket-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .bracket-path,
+  .bracket-finals {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .bracket-path h3,
+  .bracket-finals h3 {
+    font-size: 34px;
+  }
+
+  .team {
+    font-size: 13px;
+    min-height: 50px;
+  }
+  .bracket-section {
+    padding: 52px 18px;
+  }
+
+  .bracket-header h2 {
+    font-size: 48px;
+  }
+
+  .bracket-header p {
+    font-size: 15px;
+  }
+
+  .bracket-path-card,
+  .grand-final-card {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .bracket-path-card h3,
+  .grand-final-card h3 {
+    font-size: 36px;
+  }
+
+  .bracket-tree {
+    min-width: 760px;
+    grid-template-columns: 210px 210px 210px;
+    column-gap: 58px;
+  }
+
+  .round-one .match::after {
+    right: -58px;
+    width: 58px;
+  }
+
+  .team {
+    font-size: 13px;
+  }
+}
+
+
+
 /* Phone layout */
 @media (max-width: 600px) {
   .navbar {
@@ -339,5 +901,25 @@ img {
 
   .hero-typing-text {
     font-size: 64px;
+  }
+
+  .pick-six-section {
+    padding: 52px 18px;
+  }
+
+  .pick-six-header h2 {
+    font-size: 48px;
+  }
+
+  .pick-six-header p {
+    font-size: 15px;
+  }
+
+  .artist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-card img {
+    height: 320px;
   }
 }
