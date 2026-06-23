@@ -64,3 +64,29 @@ document.addEventListener("DOMContentLoaded", function () {
   typeEffect();
   typeEffectArtist();
 });
+
+function fitBracketToScreen() {
+  const bracketFit = document.querySelector(".bracket-fit");
+  const bracketBoard = document.querySelector(".bracket-board");
+
+  if (!bracketFit || !bracketBoard) return;
+
+  const baseWidth = 1700;
+  const baseHeight = 1000;
+
+  const availableWidth = bracketFit.clientWidth;
+
+  // Shrinks the bracket if needed, but does not enlarge it past original size
+  const scale = Math.min(1, availableWidth / baseWidth);
+
+  const scaledWidth = baseWidth * scale;
+  const scaledHeight = baseHeight * scale;
+
+  bracketBoard.style.transform = `scale(${scale})`;
+  bracketBoard.style.left = `${(availableWidth - scaledWidth) / 2}px`;
+
+  bracketFit.style.height = `${scaledHeight}px`;
+}
+
+window.addEventListener("load", fitBracketToScreen);
+window.addEventListener("resize", fitBracketToScreen);

@@ -500,10 +500,10 @@ img {
 
 .bracket-section {
   width: 100%;
-  padding: 88px 8%;
+  padding: 88px 4%;
 
   background:
-    radial-gradient(circle at 80% 20%, rgba(255, 115, 92, 0.12) 0%, transparent 30%),
+    radial-gradient(circle at 50% 18%, rgba(247, 201, 107, 0.1) 0%, transparent 30%),
     linear-gradient(135deg, #15101C 0%, #21162B 100%);
 
   border-top: 1px solid #41324F;
@@ -511,7 +511,7 @@ img {
 
 .bracket-header {
   max-width: 780px;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 
 .bracket-header h2 {
@@ -530,183 +530,115 @@ img {
   line-height: 1.7;
 }
 
-.traditional-bracket {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+.bracket-fit {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
-.bracket-path-card,
-.grand-final-card {
-  background: rgba(36, 27, 46, 0.78);
+.bracket-board {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 1700px;
+  height: 1000px;
+
+  transform-origin: top left;
+
+  background:
+    linear-gradient(rgba(65, 50, 79, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(65, 50, 79, 0.13) 1px, transparent 1px),
+    rgba(21, 16, 28, 0.48);
+
+  background-size: 90px 90px;
   border: 1px solid #41324F;
   border-radius: 28px;
-  padding: 32px;
-  overflow-x: auto;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
 }
 
-.bracket-path-card h3,
-.grand-final-card h3 {
-  color: #F7C96B;
-  font-family: "Jolly Lodger", cursive;
-  font-size: 46px;
-  font-weight: 400;
-  margin-bottom: 34px;
+.bracket-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
 }
 
-/* The actual bracket layout */
-.bracket-tree {
-  min-width: 850px;
-
-  display: grid;
-  grid-template-columns: 240px 240px 240px;
-  column-gap: 72px;
-  align-items: center;
+.bracket-lines path {
+  fill: none;
+  stroke: #B9AFC6;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  opacity: 0.78;
 }
 
-.bracket-round {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 64px;
-  position: relative;
-}
+.bracket-slot {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  z-index: 2;
 
-.lower-bracket-tree .round-one {
-  gap: 34px;
-}
-
-.lower-bracket-tree .round-two {
-  gap: 96px;
-}
-
-.match {
-  position: relative;
-  background: #241B2E;
-  border: 1px solid #41324F;
-  border-radius: 16px;
-  overflow: visible;
-  min-height: 108px;
-}
-
-.team {
+  width: 120px;
   height: 54px;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  padding: 0 16px;
+  padding: 6px 8px;
+
+  background: #241B2E;
+  border: 1px solid #41324F;
+  border-radius: 4px;
 
   color: #F7EEDC;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
 
-  background: #241B2E;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
 }
 
-.team:first-child {
-  border-radius: 16px 16px 0 0;
-  border-bottom: 1px solid rgba(65, 50, 79, 0.9);
-}
-
-.team:last-child {
-  border-radius: 0 0 16px 16px;
-}
-
-.winner-slot {
+.bracket-slot.empty {
   color: #B9AFC6;
   font-style: italic;
+  font-weight: 600;
+  background: rgba(36, 27, 46, 0.72);
 }
 
-.top-seed {
-  color: #15101C;
-  background: linear-gradient(135deg, #F7C96B, #FF9A62);
+.bracket-slot.top-seed {
+  border-color: #F7C96B;
+  background:
+    linear-gradient(135deg, rgba(247, 201, 107, 0.24), #241B2E 70%);
 }
 
-.final-path-match {
+.bracket-slot.semi-slot {
   border-color: #5BE3C6;
 }
 
-.grand-final-card {
-  max-width: 620px;
-  margin: 0 auto;
-  width: 100%;
-  overflow-x: visible;
-}
-
-.grand-final-match {
+.bracket-slot.finalist-slot {
   border-color: #FF735C;
-  box-shadow: 0 0 34px rgba(255, 115, 92, 0.22);
-}
-
-.finalist {
   color: #F7EEDC;
-  font-size: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 115, 92, 0.22), #241B2E 72%);
 }
 
-.grand-final-match .team:first-child {
-  background: rgba(255, 115, 92, 0.14);
+.bracket-slot.champion-slot {
+  border-color: #F7C96B;
+  color: #15101C;
+  background: linear-gradient(135deg, #F7C96B, #FF9A62);
+  font-weight: 900;
+  box-shadow: 0 0 34px rgba(247, 201, 107, 0.28);
 }
 
-.grand-final-match .team:last-child {
-  background: rgba(91, 227, 198, 0.12);
-}
-
-/* Horizontal lines from Round 1 to Round 2 */
-.round-one .match::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -72px;
-  width: 72px;
-  height: 2px;
-  background: #41324F;
-  transform: translateY(-50%);
-}
-
-/* Horizontal lines from Round 2 toward connector */
-.round-two .match::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -36px;
-  width: 36px;
-  height: 2px;
-  background: #41324F;
-  transform: translateY(-50%);
-}
-
-/* Vertical connector between Round 2 matches */
-.round-two::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -36px;
-  width: 2px;
-  height: 172px;
-  background: #41324F;
-  transform: translateY(-50%);
-}
-
-/* Horizontal line from connector into Round 3 */
-.round-three .match::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -36px;
-  width: 36px;
-  height: 2px;
-  background: #41324F;
-  transform: translateY(-50%);
-}
-
-/* Small glow on important path matches */
-.final-path-match::after,
-.grand-final-match::after {
-  display: none;
-}
 
 @media (max-width: 1000px) {
   .artist-grid {
@@ -762,61 +694,8 @@ img {
     font-size: 15px;
   }
 
-  .bracket-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .bracket-path,
-  .bracket-finals {
-    padding: 22px;
-    border-radius: 22px;
-  }
-
-  .bracket-path h3,
-  .bracket-finals h3 {
-    font-size: 34px;
-  }
-
-  .team {
-    font-size: 13px;
-    min-height: 50px;
-  }
-  .bracket-section {
-    padding: 52px 18px;
-  }
-
-  .bracket-header h2 {
-    font-size: 48px;
-  }
-
-  .bracket-header p {
-    font-size: 15px;
-  }
-
-  .bracket-path-card,
-  .grand-final-card {
-    padding: 22px;
-    border-radius: 22px;
-  }
-
-  .bracket-path-card h3,
-  .grand-final-card h3 {
-    font-size: 36px;
-  }
-
-  .bracket-tree {
-    min-width: 760px;
-    grid-template-columns: 210px 210px 210px;
-    column-gap: 58px;
-  }
-
-  .round-one .match::after {
-    right: -58px;
-    width: 58px;
-  }
-
-  .team {
-    font-size: 13px;
+  .bracket-board {
+    margin: 0;
   }
 }
 
